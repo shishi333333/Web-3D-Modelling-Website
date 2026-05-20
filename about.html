@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Merriweather:wght@300;400&family=Raleway:wght@400;500;600&family=Nunito:wght@500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style_button.css">
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/6ac3910c4e.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/106/three.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/OrbitControls.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/GLTFLoader.js'></script>
+    
+
+
+    <title>3D Web Page</title>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-sm garden-navbar" style="background-color: rgb(234, 230, 254);">
+      <div class="logo">
+        <a class="navbar-brand" href="#">
+          <h1>Garden On Canvas</h1>
+         
+        </a>
+      </div>
+        
+
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+            
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown">Garden</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="Tap.html">Water Pump</a>
+              <a class="dropdown-item" href="Vase.html">Flower</a>
+              <a class="dropdown-item" href="Bee.html">Bee</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html" data-toggle="popover" data-trigger="hover" data-placement="bottom">About</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </nav>
+
+    <br>
+
+
+    <main class="about-page container">
+
+      <section class="about-section">
+        <h2>Overview</h2>
+        <div class="about-canvas">
+          <p>
+            Garden On Canvas is inspired by the atmosphere of a wild garden in late spring. The website combines the 3D models with painted abstract
+             backgrounds to create a soft, exhibition-like experience. The overall design is intentionally minimal so that the models
+              remain the focus of each scene.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>Development</h2>
+        <div class="about-canvas">
+          <p>
+            <br>
+            <br>
+            <b>Bee</b>
+            <br>
+            I followed the tutorial Bee Animation by PIXXO 3D to create my bee model. One of the main development challenges involved the wing
+            animation. Initially, a mirror modifier had been used during modelling, which later
+            caused issues when animating the wings independently. This was resolved by replacing
+            the mirrored wings with separate individual wings so they could move correctly.
+            <br>
+            <i>Blender view</i>
+            <br>
+            <img src="assets/images/beeTest.png" alt="Blender flower model before export testing">
+
+            <br><br>
+            <b>Flower</b>
+            <br>
+            The flower model was developed using a tutorial by Atti. This was the most detailed
+            model to create due to the layered petals, and particle system.
+            The original Blender model included mixed shaders and particle systems for
+            details such as fine hairs and feathery petal textures. The particles were converted to mesh
+             to transfer correctly to the website. 
+            <br>
+            <i>Blender view</i>
+            <br>
+            <img src="assets/images/flowerTest.png" alt="Blender flower model before export testing">
+
+            <br><br>
+            <b>Water Pump</b>
+            <br>
+             The water pump model was created using a tutorial by CG VOICE. Initially, physics
+            simulations were used in Blender to create flowing water. Although the simulation
+            worked inside Blender, it could not be exported successfully into the GLB file.
+            Instead, the water effect was recreated using an animated curve mesh.
+             Separate moving parts were also required so the pump handle could
+            animate independently.
+            <br>
+            <i>Blender view</i>
+            <br>
+            <img src="assets/images/pumpTest.png" alt="Blender Water Pump model before export testing">
+
+            <br>
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>Design Choices</h2>
+        <div class="about-canvas">
+          <p>
+            <b>Bee</b><br>
+            Initially I used a mirror modifier to ease building of the model. However this caused problems
+            during animation. Mirrored components like wings were deleted to add animation to the model.
+            The model animations include movement of the bee in a stationery position, and flight.
+            <br><br>
+
+            <b>Flower</b><br>
+            The flower included a particle system which could not be exported in GLB format. This was changed 
+            to mesh to maintain the visuals of the flower. The model animation includes rotating the petals 
+            around each other, and releasing of pollen which was added using JavaScript.
+            <br><br>
+
+            <b>Water Pump</b><br>
+            The water pump was modelled leaving the handle area separate to facilitate motion during animation.
+            The model animation includes movement of the handle, together with water pouring out of the pump. The
+            water was simulated using a curve and droplets using a mesh object.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>Accessibility</h2>
+        <div class="about-canvas">
+          <p>
+            Accessibility was considered through readable fonts, clearly labelled buttons,
+            visible hover, and text descriptions for each 3D model. The
+            website also includes multiple camera angles, rotation controls, and adjustable
+            lighting so users can view the models more clearly from different positions.
+            <br><br>
+            Alternative text was added to images where possible, and the layout was tested
+            across different screen sizes to improve readability and usability.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>Testing</h2>
+        <div class="about-canvas">
+          <p>
+            <b>Bee</b><br>
+            The bee model required repeated testing to improve the animation and lighting.
+            During development, the lighting often became too strong from certain camera angles,
+            causing parts of the model to appear washed out. Different light positions and
+            intensities were tested to create softer shadows and more balanced highlights. The problem caused
+            by the mirror modifier was solved during the testing lab.
+            <br><br>
+
+            <b>Flower</b><br>
+            The flower model required extensive testing due to export issues between Blender
+            and Three.js. The particle systems and mix shaders that appeared correctly in
+            Blender disappeared when exported as a GLB file. Alternative approaches
+            were tested, including converting particles into meshes and replacing textures with
+            a UV image.
+            <br><br>
+
+            <b>Water Pump</b><br>
+            The water pump required testing of both animation and interaction. Problems occurred
+            when toggling the wireframe mode because different moving parts of the model reacted
+            inconsistently. The water animation was also adjusted multiple
+            times to ensure the movement appeared natural.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>Generative AI</h2>
+        <div class="about-canvas">
+          <p>
+            Generative AI was used for support during development and debugging. It
+            helped identify possible solutions for converting Blender particle systems into
+            mesh or curve-based alternatives for the flower model.
+            <br><br>
+            It was also used to troubleshoot issues with exporting animated models, model orientation, JavaScript errors, canvas
+            resizing, and Three.js interaction features such as toggling the wireframe. The final design and implementation
+            decisions were reviewed and adjusted manually.
+          </p>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <h2>Links</h2>
+        <div class="about-canvas">
+          <p>
+            <a href="https://users.sussex.ac.uk/~ba415/3dapp/assignment/Coursework/index.html">Live Site</a>
+            <br><br>
+            <a href="https://github.com/shishi333333/Web-3D-Modelling-Website">GitHub Repository</a>
+          </p>
+        </div>
+      </section>
+
+
+    </main>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark footer">
+      <div class="container-fluid">
+        <div class="navbar-text float-left copyright">
+          <p><span class="align-baseline"></span>Garden On Canvas</p>
+        </div>
+
+        <div class="navbar-text float-right social">
+            <a href="https://www.instagram.com/garden_on_canvas/"><i class="fab fa-instagram-square fa-2x"></i></a>
+            <a href="https://uk.pinterest.com/bashirahderm/garden-on-canvas/?request_params=%7B%221%22%3A%20130%2C%20%227%22%3A%209036409364938033363%2C%20%228%22%3A%201121185338423917764%2C%20%2230%22%3A%20%22Garden%20on%20Canvas%22%2C%20%2232%22%3A%2045%2C%20%2233%22%3A%20%5B1121185269755974016%2C%201121185269755974033%2C%201121185269755974056%2C%201121185269755973948%5D%2C%20%2236%22%3A%20%5B1121185338423917764%5D%2C%20%2237%22%3A%20%22Garden%20on%20Canvas%22%2C%20%2234%22%3A%200%2C%20%22102%22%3A%204%7D&full_feed_title=Garden%20on%20Canvas&view_parameter_type=3069&pins_display=3"><i class="fab fa-pinterest-square fa-2x"></i></a>
+            <a href="https://github.com/shishi333333/Web-3D-Modelling-Website"><i class="fab fa-github-square fa-2x"></i></a>
+        </div>
+      </div>
+    </nav>
+
+
+
+ 
+  </body>
+</html>

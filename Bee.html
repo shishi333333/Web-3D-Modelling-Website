@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Merriweather:wght@300;400&family=Raleway:wght@400;500;600&family=Nunito:wght@500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="style_button.css">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/6ac3910c4e.js" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
+    
+
+
+    <title>3D Web Page</title>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-sm garden-navbar" >
+
+      
+      <div class="logo">
+        <a class="navbar-brand" href="#">
+          <h1>Garden On Canvas</h1>
+         
+        </a>
+      </div>
+        
+
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+            
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown">Garden</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="Tap.html">Water Pump</a>
+              <a class="dropdown-item" href="Vase.html">Flower</a>
+              <a class="dropdown-item" href="Bee.html">Bee</a>
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html" data-toggle="popover" data-trigger="hover" data-placement="bottom">About</a>
+          </li>
+
+        </ul>
+      </div>
+
+    </nav>
+     <br>
+
+    
+    <div class="container-fluid main-contents">
+      <div id="gui-container"></div>
+
+      <div class="button-col">
+                <button id="btn">
+                  Wake Bee!
+                </button>
+
+                <button id="playSecondModelAnimation">
+                  Fly!
+                </button>
+
+                <button id="toggleWireframe">
+                  Toggle Wireframe
+                </button>
+
+                <button id="rotate">
+                  Rotate
+                </button>
+
+                <button onclick="setCameraView('front')">Front View</button>
+                <button onclick="setCameraView('side')">Side View</button>
+                <button onclick="setCameraView('top')">Top View</button>
+
+      </div>
+
+      <div class="row">
+          <div class="col-sm-10">
+            <div class="model-section">
+
+              <div class="card">
+                <div class="card-header">
+                  <h1 class="model-title">Bee</h1>
+
+                </div>
+              </div>
+
+              <div class="card-body">
+                <div class="canvas-wrapper">
+                <canvas id="threeContainer"></canvas>
+                
+              </div>
+
+              
+            </div>
+            
+            
+
+            
+
+          </div>
+      </div>
+    </div>
+    
+    
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/106/three.min.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/OrbitControls.js'></script>
+    <script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/GLTFLoader.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js" integrity="sha512-WoO4Ih0CDOSLYafy22wZD/mcJ7k0ESLqtQsFa6zFKnEUrbtuGU+GkLtVhgt93xa2qewG5gKEC6CWlN8OaCTSVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark footer">
+      <div class="container-fluid">
+        <div class="navbar-text float-left copyright">
+          <p><span class="align-baseline"></span>Garden On Canvas</p>
+        </div>
+
+        <div class="navbar-text float-right social">
+            <a href="https://www.instagram.com/garden_on_canvas/"><i class="fab fa-instagram-square fa-2x"></i></a>
+            <a href="https://uk.pinterest.com/bashirahderm/garden-on-canvas/?request_params=%7B%221%22%3A%20130%2C%20%227%22%3A%209036409364938033363%2C%20%228%22%3A%201121185338423917764%2C%20%2230%22%3A%20%22Garden%20on%20Canvas%22%2C%20%2232%22%3A%2045%2C%20%2233%22%3A%20%5B1121185269755974016%2C%201121185269755974033%2C%201121185269755974056%2C%201121185269755973948%5D%2C%20%2236%22%3A%20%5B1121185338423917764%5D%2C%20%2237%22%3A%20%22Garden%20on%20Canvas%22%2C%20%2234%22%3A%200%2C%20%22102%22%3A%204%7D&full_feed_title=Garden%20on%20Canvas&view_parameter_type=3069&pins_display=3"><i class="fab fa-pinterest-square fa-2x"></i></a>
+            <a href="https://github.com/shishi333333/Web-3D-Modelling-Website"><i class="fab fa-github-square fa-2x"></i></a>
+        </div>
+      </div>
+    </nav>
+
+    
+
+  </body>
+</html>
